@@ -1,8 +1,11 @@
 package com.juaracoding.tafuadywebhadir.tugasakhir.page.user;
 
 
+import com.juaracoding.tafuadywebhadir.tugasakhir.impl.Test1Hooks;
 import com.juaracoding.tafuadywebhadir.tugasakhir.util.Constants;
 import com.juaracoding.tafuadywebhadir.tugasakhir.util.GlobalFunction;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +27,14 @@ Version 1.0
 public class RegistrasiPageHadirUser {
 
     private WebDriver driver;
+
+    private boolean validNik;
+    private boolean validNamaLengkap;
+    private boolean validEmail;
+    private boolean validPassword;
+    private boolean validFile;
+
+
 
     @FindBy(xpath = "//input[@id='nik']")
     private WebElement inputNik;
@@ -55,6 +66,7 @@ public class RegistrasiPageHadirUser {
     public RegistrasiPageHadirUser(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
+
     }
 
     public WebElement getInputNik() {
@@ -113,7 +125,34 @@ public class RegistrasiPageHadirUser {
     }
 
 
+    public Boolean getIsValidNik() {
+        validNik = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].validity.valid;",inputNik);
+        return validNik;
+    }
+
+    public Boolean getIsValidNamaLengkap() {
+        validNamaLengkap = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].validity.valid;",inputFullNama);
+        return validNamaLengkap;
+    }
+
+    public Boolean getIsValidEmail() {
+        validEmail = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].validity.valid;",inputEmail);
+        return validEmail;
+    }
+
+    public Boolean getIsValidPassword() {
+        validPassword = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].validity.valid;",inputPassword);
+        return validPassword;
+    }
+
+    public Boolean getIsValidFile() {
+        validFile = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].validity.valid;",inputFile);
+        return validFile;
+    }
 }
+
+
+
 
 
 

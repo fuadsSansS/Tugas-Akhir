@@ -168,7 +168,6 @@ public class PendaftaranSendiriPageHadirAdmin {
         List<WebElement> rows = getTableDaftarSendiri().findElements(By.tagName("tr"));
         for (WebElement row : rows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
-
             // Memastikan bahwa ada cukup sel di baris
             if (cells.size() > 9) {
                 List<WebElement> btnActions = cells.get(9).findElements(By.tagName("button"));

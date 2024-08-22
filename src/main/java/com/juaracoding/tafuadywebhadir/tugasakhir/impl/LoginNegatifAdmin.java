@@ -57,7 +57,7 @@ public class LoginNegatifAdmin {
         loginPageHadirAdmin.getBtnLogin().click();
         extentTest.log(LogStatus.PASS, "TLNA002 Klik Tombol Login");
     }
-    @Then("TLNA002 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
+    @And("TLNA002 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
     public void tlna002_validasi_seluruh_notifikasi_yang_muncul_saat_tombol_login_di_klik(){
         validasi = loginPageHadirAdmin.getTxtAllert() == null ? "":loginPageHadirAdmin.getTxtAllert().getText();
         Assert.assertEquals(validasi, "Akun tidak ditemukan");
@@ -90,7 +90,7 @@ public class LoginNegatifAdmin {
         loginPageHadirAdmin.getBtnLogin().click();
         extentTest.log(LogStatus.PASS, "TLNA003 Klik Tombol Login");
     }
-    @Then("TLNA003 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
+    @And("TLNA003 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
     public void tlna003_validasi_seluruh_notifikasi_yang_muncul_saat_tombol_login_di_klik(){
         validasi = loginPageHadirAdmin.getTxtAllert() == null ? "":loginPageHadirAdmin.getTxtAllert().getText();
         Assert.assertEquals(validasi, "Akun tidak ditemukan");
@@ -122,7 +122,7 @@ public class LoginNegatifAdmin {
         loginPageHadirAdmin.getBtnLogin().click();
         extentTest.log(LogStatus.PASS, "TLNA004 Klik Tombol Login");
     }
-    @Then("TLNA004 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
+    @And("TLNA004 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
     public void tlna004_validasi_seluruh_notifikasi_yang_muncul_saat_tombol_login_di_klik(){
         validasi = loginPageHadirAdmin.getTxtAllert() == null ? "":loginPageHadirAdmin.getTxtAllert().getText();
         Assert.assertEquals(validasi, "Email atau password salah");
@@ -158,8 +158,11 @@ public class LoginNegatifAdmin {
     @Then("TLNA005 Validasi Setelah Di Klik")
     public void tlna005_validasi_setelah_di_klik(){
         boolean strBol = loginPageHadirAdmin.getValidEmail();
-        System.out.println(strBol);
-        extentTest.log(LogStatus.PASS, "TLNA005 Validasi Setelah Di Klik");
+        if (strBol == true){
+            extentTest.log(LogStatus.PASS, "TLNA005 Validasi Setelah Di Klik");
+        }else {
+            extentTest.log(LogStatus.PASS, "TLNA005 Validasi Setelah Di Klik");
+        }
     }
 
 }

@@ -95,13 +95,13 @@ Feature: Registrasi positif User Mandiri
         And TRUMP025 Klik Button Search
         And TRUMP025 Validasi Hasil Search
         And TRUMP025 Download Image Di Page Admin
-#        And TRUMP025 Compare Kedua Gambar Ke Website Image Online
-#        And TRUMP025 Validasi Hasil Compare
-#        And TRUMP025 Tutup Web Image Online
-#        And TRUMP025 Kembali Ke Web Admin Hadir
-#        And TRUMP025 Klik Button Dropspan Profil
-#        And TRUMP025 Klik Button Logout Admin
-#        Then TRUMP025 Validasi Berhasil logout
+        And TRUMP025 Compare Kedua Gambar Ke Website Image Online
+        And TRUMP025 Validasi Hasil Compare
+        And TRUMP025 Tutup Web Image Online
+        And TRUMP025 Kembali Ke Web Admin Hadir
+        And TRUMP025 Klik Button Dropspan Profil
+        And TRUMP025 Klik Button Logout Admin
+        Then TRUMP025 Validasi Berhasil logout
 
 
 

@@ -50,10 +50,6 @@ public class HomePageHadirUser {
     private WebElement fieldNotes;
 
 
-    /**Select Tipe Absen di Page Home Mobile Mirroring*/
-    @FindBy(xpath = "//*[@id=\"mui-component-select-is_wfh\"]")
-    private WebElement inputTipeAbsen;
-
     /** Button Camera*/
     @FindBy(xpath = "/html/body/div[2]/div[3]/div/div/div/button")
     private WebElement btnCamera;
@@ -72,6 +68,10 @@ public class HomePageHadirUser {
 
     @FindBy(xpath = "/html/body/div/div/div/div[1]/div[4]/div[2]/div/div[1]/div[1]/span/img")
     private WebElement imageGambar;
+
+
+    @FindBy(xpath = "//img[@alt='Absensi']")
+    private WebElement btnAbsensi;
 
     @FindBy(xpath = "/html/body/div[2]/div[3]/div[2]/button")
     private WebElement btnLogOutUser;
@@ -98,12 +98,6 @@ public class HomePageHadirUser {
                 .until(ExpectedConditions.visibilityOf(fieldNotes));
     }
 
-
-    public WebElement getInputTipeAbsen() {
-        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
-        return new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT))
-                .until(ExpectedConditions.visibilityOf(inputTipeAbsen));
-    }
 
     public WebElement getBtnCamera() {
         GlobalFunction.delay(Constants.TIMEOUT_DELAY);
@@ -153,28 +147,14 @@ public class HomePageHadirUser {
                 .until(ExpectedConditions.visibilityOf(imageGambar));
     }
 
-
-    public List<WebElement> getTxtFieldTipeAbsen() {
-        List<WebElement> tipeAbsenList = new ArrayList<>();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT_DELAY));
-        try {
-            // Tunggu hingga elemen <select> dengan XPath terlihat
-            WebElement selectElement = wait.until(ExpectedConditions.visibilityOf(inputTipeAbsen));
-
-            // Temukan semua elemen <option> di dalam elemen <select>
-            List<WebElement> optionElements = new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
-                    .until(ExpectedConditions.visibilityOf(inputTipeAbsen)).findElement(By.tagName("ul")).findElements(By.tagName("li"));
-
-            // Iterasi dan ambil teks dari setiap elemen <option>
-            for (WebElement option : optionElements) {
-                tipeAbsenList.add(option);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return tipeAbsenList;
+    public WebElement getBtnAbsensi() {
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
+        return new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
+                .until(ExpectedConditions.visibilityOf(btnAbsensi));
     }
+
+
+
 }
 
 

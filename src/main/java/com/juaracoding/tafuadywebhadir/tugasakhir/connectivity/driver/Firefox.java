@@ -14,8 +14,9 @@ public class Firefox implements DriverStrategy {
 
 		// Konfigurasi Firefox agar mengizinkan akses kamera
 		FirefoxOptions options = new FirefoxOptions();
-		options.addPreference("media.navigator.permission.disabled", true);
-		options.addPreference("media.navigator.streams.fake", true);
+		options.addArguments("--no-sandbox");
+		options.addArguments("use-fake-ui-for-media-stream");
+
 
 		return new FirefoxDriver(options);
 	}

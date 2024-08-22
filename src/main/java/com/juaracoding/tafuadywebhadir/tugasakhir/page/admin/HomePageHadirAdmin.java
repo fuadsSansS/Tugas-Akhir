@@ -50,6 +50,9 @@ public class HomePageHadirAdmin {
     @FindBy(xpath = "//p[@class='MuiTypography-root MuiTypography-body1 css-aqx7sf'][normalize-space()='Semua']")
     private WebElement sideKehadiran;
 
+    @FindBy(xpath = "//p[@class='MuiTypography-root MuiTypography-body1 css-aqx7sf'][normalize-space()='Client Upliner']")
+    private WebElement sideClientUpliner;
+
     @FindBy(xpath = "/html/body/div[2]/div[3]/ul/div/button[2]")
     private WebElement btnLogOut;
 
@@ -106,6 +109,12 @@ public class HomePageHadirAdmin {
         GlobalFunction.delay(Constants.TIMEOUT_DELAY);
         return new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY)).
                 until(ExpectedConditions.visibilityOf(sideKehadiran));
+    }
+
+    public WebElement getSideClientUpliner() {
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
+        return new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY)).
+                until(ExpectedConditions.visibilityOf(sideClientUpliner));
     }
 
     public WebElement getBtnLogOut() {

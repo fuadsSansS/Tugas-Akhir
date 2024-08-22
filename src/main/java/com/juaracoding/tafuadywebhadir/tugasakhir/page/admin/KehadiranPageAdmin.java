@@ -42,7 +42,7 @@ public class KehadiranPageAdmin {
     @FindBy(xpath = "/html/body/div[1]/div/div/div/div[1]/div/div[2]/div/div[1]/div/table")
     private WebElement tableKehadiran;
 
-    @FindBy(xpath = "//*[@id=\"__next\"]/div/div/div/div[1]/div/div[2]/div/div[1]/div/table/tbody/tr[1]/td[1]/div/span/img")
+    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[1]/div/div[2]/div/div[1]/div/table/tbody/tr[1]/td[1]/div/span/img")
     private WebElement imageTableKehadiran;
 
 //    @FindBy(xpath = )
@@ -112,13 +112,6 @@ public class KehadiranPageAdmin {
         return tableData;
     }
 
-    public List<WebElement> getImageElementsInTable() {
-        WebElement table = getTableKehadiran();
-        if (table != null) {
-            return table.findElements(By.xpath(".//td//span//img")); // XPath relatif untuk gambar dalam tabel
-        }
-        return null;
-    }
 
 
 

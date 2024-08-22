@@ -20,21 +20,27 @@ public class Test1Hooks {
 	private static LoginTesting[] tests = LoginTesting.values();
 	private static final int[] DATA_OUTLINE = {
 
-//			1,//TLPA001 Valid Login
-//			1,//TLNA002 Login Dengan Email Dan Password Kosong
-//			1,//TLNA003 Login Dengan Email Tidak Valid
-//			1,//TLNA004 Login Dengan Password Tidak Valid
-//			1,//TLNA005 Login Dengan Format Email Yang Salah Tidak Valid
-//			1,//TLPU011 Valid login user
-//			1,//TLNU012 Login dengan email dan password kosong
-//			1,//TLNU013 Login Dengan Email Tidak Valid
-//			1,//TLNU014 Login Dengan Password Tidak Valid
-//			1,//TLNU015 Login Dengan Format Email Yang Salah
-			1,
-			1,
-			1,
-			1,
-			1,
+			1,//TLPA001 Valid Login
+			1,//TLNA002 Login Dengan Email Dan Password Kosong
+			1,//TLNA003 Login Dengan Email Tidak Valid
+			1,//TLNA004 Login Dengan Password Tidak Valid
+			1,//TLNA005 Login Dengan Format Email Yang Salah Tidak Valid
+			1,//TLPU011 Valid login user
+			1,//TLNU012 Login dengan email dan password kosong
+			1,//TLNU013 Login Dengan Email Tidak Valid
+			1,//TLNU014 Login Dengan Password Tidak Valid
+			1,//TLNU015 Login Dengan Format Email Yang Salah
+			1,//TRUMP021 Proses Registrasi Positif dengan Semua Kolom Diisi dengan Benar
+			1,//TRUMP022 Proses Kelengkapan Registrasi User
+			1,//TRUMP023 Proses Aproval Data User
+			1,//TRUMP024 Proses Login Dari User Yang Telah Di Regis dan Absensi
+			1,//TRUMP025 Validasi Absen
+			1,//TRUMN023 User Input Dengan Semua Data Kosong
+			1,//TRUMN024 User Input Email Tidak Sesuai Format
+			1,//TTPK031 Tambah Kalender
+			1,//TEPK035 Edit Kalender Kalender
+			1,//TTNK033 Tambah Kalender Dengan Inputan Kosong
+			1,//TCUP050 Menambahkan Client Upliner Baru
 
 	};
 	private String testReport = "";

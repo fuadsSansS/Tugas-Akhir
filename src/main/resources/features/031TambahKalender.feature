@@ -1,4 +1,4 @@
-Feature: Tambah Posisi
+Feature: Tambah kalender
   Scenario: TTPK031 Tambah Kalender
     Given TTPK031 Akses Halaman Login Admin
     And TTPK031 Validasi Halaman Admin Login
@@ -12,4 +12,14 @@ Feature: Tambah Posisi
     And TTPK031 Validasi Halaman Kalender
     And TTPK031 Klik Button Tambah Kalender
     And TTPK031 Input Nama Kalender
+    And TTPK031 Tekan Tambah Kalender
+    And TTPK031 Input Nama Kalender Field Search
+    And TTPK031 Tekan Button Search
+    Then TTPK031 Validasi Tambah Kalender
+
+
+
+
+
+
     

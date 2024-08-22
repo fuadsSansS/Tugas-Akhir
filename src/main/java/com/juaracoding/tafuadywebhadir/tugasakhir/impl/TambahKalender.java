@@ -4,13 +4,17 @@ import com.juaracoding.tafuadywebhadir.tugasakhir.page.admin.HomePageHadirAdmin;
 import com.juaracoding.tafuadywebhadir.tugasakhir.page.admin.KalenderPageUser;
 import com.juaracoding.tafuadywebhadir.tugasakhir.page.admin.LoginPageHadirAdmin;
 import com.juaracoding.tafuadywebhadir.tugasakhir.util.Constants;
+import com.juaracoding.tafuadywebhadir.tugasakhir.util.DataGenerator;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+
+import java.util.List;
 
 /*
 IntelliJ IDEA 2022.3.1 (Community Edition)
@@ -27,7 +31,9 @@ public class TambahKalender {
     private LoginPageHadirAdmin loginPageHadirAdmin;
     private HomePageHadirAdmin homePageHadirAdmin;
     private KalenderPageUser kalenderPageUser;
+    private static DataGenerator dataGenerator;
     private static ExtentTest extentTest;
+    private static String zipKode;
 
 
     public TambahKalender(){
@@ -36,6 +42,8 @@ public class TambahKalender {
         homePageHadirAdmin = new HomePageHadirAdmin(driver);
         kalenderPageUser = new KalenderPageUser(driver);
         extentTest = Test1Hooks.extentTest;
+        dataGenerator = new DataGenerator();
+        zipKode = dataGenerator.dataKota();
     }
 
     @Given("TTPK031 Akses Halaman Login Admin")
@@ -90,7 +98,6 @@ public class TambahKalender {
     public void TTPK031_validasi_halaman_kalender(){
         WebElement kalernderTable = kalenderPageUser.getTableKalender();
         boolean validKalenderPage = kalernderTable.isDisplayed();
-        System.out.println(validKalenderPage);
         extentTest.log(LogStatus.PASS, "TTPK031 Validasi Halaman kalender");
     }
     @And("TTPK031 Klik Button Tambah Kalender")
@@ -100,9 +107,39 @@ public class TambahKalender {
     }
     @And ("TTPK031 Input Nama Kalender")
     public void TTPK031_input_nama_position(){
-        kalenderPageUser.getInputKalnder().sendKeys("hahaha");
+        kalenderPageUser.getInputKalnder().sendKeys(zipKode);
         extentTest.log(LogStatus.PASS, "TTPK031 Input Nama Kalender");
     }
+
+    @And ("TTPK031 Tekan Tambah Kalender")
+    public void TTPK031_tekan_tambah_kalender(){
+        kalenderPageUser.getBtnInputKalender().click();
+        extentTest.log(LogStatus.PASS, "TTPK031 Tekan Tambah Kalender");
+    }
+
+    @And("TTPK031 Input Nama Kalender Field Search")
+    public void ttpk031_input_nama_kalender_field_search(){
+        kalenderPageUser.getInputSearch().sendKeys(zipKode);
+        extentTest.log(LogStatus.PASS, "TTPK031 Input Nama Kalender Field Search");
+    }
+
+    @And("TTPK031 Tekan Button Search")
+    public void and_ttpk031_tekan_button_search(){
+        kalenderPageUser.getBtnSearchKalender().click();
+        extentTest.log(LogStatus.PASS, "TTPK031 Tekan Button Search");
+    }
+
+    @Then("TTPK031 Validasi Tambah Kalender")
+    public void TTPK031_validasi_tambah_kalender(){
+        List<String> namaKalender = kalenderPageUser.getNamaKalender();
+        String validNamaKalender = namaKalender.get(0);
+        if(validNamaKalender.equalsIgnoreCase(zipKode)){
+            extentTest.log(LogStatus.PASS, "TTPK031 Validasi Tambah Kalender");
+        }else {
+            extentTest.log(LogStatus.PASS, "TTPK031 Validasi Tambah Kalender");
+        }
+    }
+
 
 
 }

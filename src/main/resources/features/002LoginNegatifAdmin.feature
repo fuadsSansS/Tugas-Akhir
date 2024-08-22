@@ -4,7 +4,7 @@ Feature: Login Negatif
     And TLNA002 Input Field Email Empty String
     And TLNA002 Input Field Password Empty String
     And TLNA002 Klik Tombol Login
-    Then TLNA002 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik
+    And TLNA002 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik
     Then TLNA002 Klik Tombol Silang Alert
 
   Scenario: TLNA003 Login Dengan Email Tidak Valid
@@ -12,7 +12,7 @@ Feature: Login Negatif
     And TLNA003 Input Field Email Tidak Valid
     And TLNA003 Input Field Password Valid
     And TLNA003 Klik Tombol Login
-    Then TLNA003 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik
+    And TLNA003 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik
     Then TLNA003 Klik Tombol Silang Alert
 
   Scenario: TLNA004 Login Dengan Password Tidak Valid
@@ -20,7 +20,7 @@ Feature: Login Negatif
     And TLNA004 Input Field Email Yang Valid
     And TLNA004 Input Field Password Yang Tidak Valid
     And TLNA004 Klik Tombol Login
-    Then TLNA004 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik
+    And TLNA004 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik
     Then TLNA004 Klik Tombol Silang Alert
 
   Scenario: TLNA005 Login Dengan Format Email Yang Salah

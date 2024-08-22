@@ -5,12 +5,17 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 features = {
-//		"src/main/resources/features/001LoginPositifAdmin.feature",
-//		"src/main/resources/features/002LoginNegatifAdmin.feature",
-//		"src/main/resources/features/011LoginPositifUser.feature",
-//		"src/main/resources/features/012LoginNegatifUser.feature",
+		"src/main/resources/features/001LoginPositifAdmin.feature",
+		"src/main/resources/features/002LoginNegatifAdmin.feature",
+		"src/main/resources/features/011LoginPositifUser.feature",
+		"src/main/resources/features/012LoginNegatifUser.feature",
 		"src/main/resources/features/021RegistrasiPositifUserMandiri.feature",
-//		"src/main/resources/features/031TambahKalender.feature",
+		"src/main/resources/features/023RegistrasiNegatif.feature",
+		"src/main/resources/features/031TambahKalender.feature",
+		"src/main/resources/features/035EditKalender.feature",
+		"src/main/resources/features/033TambahKalenderNegatif.feature",
+		"src/main/resources/features/050TambahClientUpliner.feature",
+
 
 		},
 glue = "com.juaracoding.tafuadywebhadir.tugasakhir.impl",

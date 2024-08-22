@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="21" time="1,193.431">
+    <testcase classname="Login Positif" name="TLPA001 Valid Login" time="35.392">
+        <system-out><![CDATA[When TLPA001 Mengakses Halaman Website......................................passed
+And TLPA001 Mengkosongkan Field Untuk Login.................................passed
+And TLPA001 Input "admin@hadir.com" Email Valid.............................passed
+And TLPA001 Input "admin@hadir" Password Valid..............................passed
+Then TLPA001 Menekan Tombol Login...........................................passed
+Then TLPA001 Validasi Halaman Home..........................................passed
+When TLPA001 Klik Span Admin................................................passed
+And TLPA001 Klik Tombol Logout..............................................passed
+Then TLPA001 Validasi Halaman Login.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNA002 Login Dengan Email Dan Password Kosong" time="25.167">
+        <system-out><![CDATA[When TLNA002 Clear Field Email Dan Password.................................passed
+And TLNA002 Input Field Email Empty String..................................passed
+And TLNA002 Input Field Password Empty String...............................passed
+And TLNA002 Klik Tombol Login...............................................passed
+And TLNA002 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik.passed
+Then TLNA002 Klik Tombol Silang Alert.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNA003 Login Dengan Email Tidak Valid" time="25.277">
+        <system-out><![CDATA[When TLNA003 Clear Field Email Dan Password.................................passed
+And TLNA003 Input Field Email Tidak Valid...................................passed
+And TLNA003 Input Field Password Valid......................................passed
+And TLNA003 Klik Tombol Login...............................................passed
+And TLNA003 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik.passed
+Then TLNA003 Klik Tombol Silang Alert.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNA004 Login Dengan Password Tidak Valid" time="25.227">
+        <system-out><![CDATA[When TLNA004 Clear Field Email Dan Password.................................passed
+And TLNA004 Input Field Email Yang Valid....................................passed
+And TLNA004 Input Field Password Yang Tidak Valid...........................passed
+And TLNA004 Klik Tombol Login...............................................passed
+And TLNA004 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik.passed
+Then TLNA004 Klik Tombol Silang Alert.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNA005 Login Dengan Format Email Yang Salah" time="16.008">
+        <system-out><![CDATA[When TLNA005 Clear Field Email Dan Password.................................passed
+And TLNA005 Input Field Email Yang Tidak Sesuai Format......................passed
+And TLNA005 Input Field Password Yang valid.................................passed
+And TLNA005 Klik Tombol Login...............................................passed
+Then TLNA005 Validasi Setelah Di Klik.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Positif User" name="TLPU011 Valid login user" time="31.479">
+        <system-out><![CDATA[When TLPU011 Mengakses Halaman Webs.........................................passed
+And TLPU011 Kosongkan Fied Email Dan Password...............................passed
+And TLPU011 Input Email Valid...............................................passed
+And TLPU011 Input Password Valid............................................passed
+And TLPU011 Tekan Tombol Masuk..............................................passed
+Then TLPU011 Validasi Halaman Home User.....................................passed
+When TLPU011 Tekan Tombol Span User.........................................passed
+And TLPU011 Tekan Tombol Logout.............................................passed
+Then TLPU011 Validasi Halaman Login.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNU012 Login dengan email dan password kosong" time="26.059">
+        <system-out><![CDATA[When TLNU012 Clear Field Email Dan Password.................................passed
+And TLNU012 Input Field Email Empty String..................................passed
+And TLNU012 Input Field Password Empty String...............................passed
+And TLNU012 Klik Tombol Login...............................................passed
+And TLNU012 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik.passed
+Then TLNU012 Klik Tombol Silang Alert.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNU013 Login Dengan Email Tidak Valid" time="25.177">
+        <system-out><![CDATA[When TLNU013 Clear Field Email Dan Password.................................passed
+And TLNU013 Input Field Email Tidak Valid...................................passed
+And TLNU013 Input Field Password Valid......................................passed
+And TLNU013 Klik Tombol Login...............................................passed
+And TLNU013 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik.passed
+Then TLNU013 Klik Tombol Silang Alert.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNU014 Login Dengan Password Tidak Valid" time="25.251">
+        <system-out><![CDATA[When TLNU014 Clear Field Email Dan Password.................................passed
+And TLNU014 Input Field Email Yang Valid....................................passed
+And TLNU014 Input Field Password Yang Tidak Valid...........................passed
+And TLNU014 Klik Tombol Login...............................................passed
+And TLNU014 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik.passed
+Then TLNU014 Klik Tombol Silang Alert.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Negatif" name="TLNU015 Login Dengan Format Email Yang Salah" time="15.968">
+        <system-out><![CDATA[When TLNU015 Clear Field Email Dan Password.................................passed
+And TLNU015 Input Field Email Yang Tidak Sesuai Format......................passed
+And TLNU015 Input Field Password Yang valid.................................passed
+And TLNU015 Klik Tombol Login...............................................passed
+Then TLNU015 Validasi Setelah Di Klik.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi positif User Mandiri" name="TRUMP021 Proses Registrasi Positif dengan Semua Kolom Diisi dengan Benar" time="51.235">
+        <system-out><![CDATA[When TRUMP021 Mengakses Halaman User........................................passed
+And TRUMP021 Validasi Setelah Berada Di Halaman Login.......................passed
+And TRUMP021 Tekan link Untuk Menuju Halaman Registrasi.....................passed
+And TRUMP021 Validasi Setelah Berada Di Halaman Registrasi..................passed
+And TRUMP021 Clear Seluruh Field............................................passed
+And TRUMP021 Input Nik Di Field Nik.........................................passed
+And TRUMP021 Input Nama Lengkap Di Field Nama Lengkap.......................passed
+And TRUMP021 Input Email Di Field Email.....................................passed
+And TRUMP021 Input Password Di Field Password...............................passed
+And TRUMP021 Scroll Ke Akhir Page...........................................passed
+And TRUMP021 Input Gambar Di Field Gambar...................................passed
+When TRUMP021 Tekan Tombol Daftar...........................................passed
+Then TRUMP021 Validasi Setelah Tombol Daftar Di Tekan.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi positif User Mandiri" name="TRUMP022 Proses Kelengkapan Registrasi User" time="331.172">
+        <system-out><![CDATA[When TRUMP022 Mengakses Halaman Admin.......................................passed
+And TRUMP022 Validasi Halaman Login Admin...................................passed
+And TRUMP022 Clear Field Email Dan Password.................................passed
+And TRUMP022 Input Email Valid..............................................passed
+And TRUMP022 Input Password Valid...........................................passed
+And TRUMP022 Menekan Tombol Login...........................................passed
+And TRUMP022 Validasi Halaman Home Admin....................................passed
+And TRUMP022 Tekan Nav Managemant User......................................passed
+And TRUMP022 Tekan Nav Pendaftaran Sendiri..................................passed
+And TRUMP022 Validasi Halaman Pendfatran Sendiri............................passed
+And TRUMP022 Pengaturan Search Berdasarkan Nik..............................passed
+And TRUMP022 Input Nik Di Field Nik.........................................passed
+And TRUMP022 Menekan Tombol Search..........................................passed
+And TRUMP022 Validasi Hasil Search..........................................passed
+And TRUMP022 Klik Button View...............................................passed
+And TRUMP022 Validasi From Input Pendaftaran Sendiri........................passed
+And TRUMP022 Input Divisi...................................................passed
+And TRUMP022 Input Unit.....................................................passed
+And TRUMP022 Input Tipe Kontrak.............................................passed
+And TRUMP022 Input Posisi Kerja.............................................passed
+And TRUMP022 Input Jabatan..................................................passed
+And TRUMP022 Input Atasan...................................................passed
+And TRUMP022 Input Atasan V2................................................passed
+And TRUMP022 Input Atsan V3.................................................passed
+And TRUMP022 Input Lokasi Kerja.............................................passed
+And TRUMP022 Input Jadwal Kerja.............................................passed
+And TRUMP022 Input Selfi....................................................passed
+And TRUMP022 Input Jumlah Cuti..............................................passed
+Then TRUMP022 Tekan Button Submit...........................................passed
+Then TRUMP022 Validasi Setelah Submit.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi positif User Mandiri" name="TRUMP023 Proses Aproval Data User" time="32.364">
+        <system-out><![CDATA[And TRUMP023 Pencarian User Berdasarkan Nik.................................passed
+And TRUMP023 Input Nik Di Pencarian User....................................passed
+And TRUMP023 Klik Button Search Di Page User................................passed
+And TRUMP023 Validasi Hasil Pencarian User..................................passed
+And TRUMP023 Klik Dropspan Profil...........................................passed
+And TRUMP023 Klik Dropdown Logout...........................................passed
+Then TRUMP023 Validasi Berhasil Logout......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi positif User Mandiri" name="TRUMP024 Proses Login Dari User Yang Telah Di Regis dan Absensi" time="87.188">
+        <system-out><![CDATA[When TRUMP024 Akses Halaman Url Login User..................................passed
+And TRUMP024 Validasi Halaman Login User....................................passed
+And TRUMP024 Clear Field Inputan Dihalaman Login............................passed
+And TRUMP024 Input Field Email Yang Sudah Di Daftarkan......................passed
+And TRUMP024 Input Field Password Yang Sudah Di Daftarkan...................passed
+And TRUMP024 Klik Button Login..............................................passed
+And TRUMP024 Validasi Halaman Home User.....................................passed
+And TRUMP024 Tekan Tombol Absen.............................................passed
+And TRUMP024 Tekan Tombol Camera............................................passed
+And TRUMP024 Input Notes....................................................passed
+And TRUMP024 Tekan Button Submit Absen Masuk................................passed
+And TRUMP024 Tekan Button Absen Keluar......................................passed
+And TRUMP024 Input Notes Absen Keluar.......................................passed
+And TRUMP024 Tekan Button Submit Absen Pulang...............................passed
+And TRUMP024 Download Image Hasil Absen.....................................passed
+And TRUMP024 Tekan Tombol DropSpan User.....................................passed
+And TRUMP024 Tekan Button Logout............................................passed
+Then TRUMP024 Validasi Berhasil logout......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi positif User Mandiri" name="TRUMP025 Validasi Absen" time="103.66">
+        <system-out><![CDATA[When TRUMP025 Mengakses Halaman Login Admin.................................passed
+And TRUMP025 Validasi Halaman Login Admin...................................passed
+And TRUMP025 Clear Field Email Dan Password.................................passed
+And TRUMP025 Input Email Valid..............................................passed
+And TRUMP025 Input Password Valid...........................................passed
+And TRUMP025 Klik Button login..............................................passed
+And TRUMP025 Validasi Halaman Home Admin....................................passed
+And TRUMP025 Klik Side Bar Laporan..........................................passed
+And TRUMP025 Klik Sub Side Bar Kehadiran....................................passed
+And TRUMP025 Validasi Halaman Kehadiran.....................................passed
+And TRUMP025 Clear Field Nama Di Field Search...............................passed
+And TRUMP025 Clear Field Start Date.........................................passed
+And TRUMP025 Clear Field End Date...........................................passed
+And TRUMP025 Input Nama Di Field Search nama................................passed
+And TRUMP025 Input Start Date Di Field Star Date............................passed
+And TRUMP025 Input End Date DI Field End Date...............................passed
+And TRUMP025 Klik Button Search.............................................passed
+And TRUMP025 Validasi Hasil Search..........................................passed
+And TRUMP025 Download Image Di Page Admin...................................passed
+And TRUMP025 Compare Kedua Gambar Ke Website Image Online...................passed
+And TRUMP025 Validasi Hasil Compare.........................................passed
+And TRUMP025 Tutup Web Image Online.........................................passed
+And TRUMP025 Kembali Ke Web Admin Hadir.....................................passed
+And TRUMP025 Klik Button Dropspan Profil....................................passed
+And TRUMP025 Klik Button Logout Admin.......................................passed
+Then TRUMP025 Validasi Berhasil logout......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi User Negatif" name="TRUMN023 User Input Dengan Semua Data Kosong" time="41.288">
+        <system-out><![CDATA[Given TRUMN023 Mengakses Halaman Login User.................................passed
+And TRUMN023 Validasi Halaman Login User....................................passed
+And TRUMN023 Klik Link Menuju Halaman Registrasi............................passed
+And TRUMN023 Validasi Halaman Registrasi....................................passed
+And TRUMN023 Clear seluruh Inputan Registrasi...............................passed
+And TRUMN023 Input Field Nik Empty..........................................passed
+And TRUMN023 Input Field Nama Lengkap Empty.................................passed
+And TRUMN023 Input Field Email Empty........................................passed
+And TRUMN023 Input Field Password Empty.....................................passed
+And TRUMN023 Klik Button Daftar.............................................passed
+Then TRUMN023 Validasi Setelah Di Klik......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registrasi User Negatif" name="TRUMN024 User Input Email Tidak Sesuai Format" time="35">
+        <system-out><![CDATA[When TRUMN024 Clear seluruh Inputan Registrasi..............................passed
+And TRUMN024 Input Field Nik................................................passed
+And TRUMN024 Input Field Nama Lengkap.......................................passed
+And TRUMN024 Input Field Email Tidak Sesuai Format..........................passed
+And TRUMN024 Input Field Password...........................................passed
+And TRUMN024 Input Field Image..............................................passed
+And TRUMN024 Klik Button Daftar.............................................passed
+Then TRUMN024 Validasi Setelah Di Klik......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Tambah kalender" name="TTPK031 Tambah Kalender" time="51.878">
+        <system-out><![CDATA[Given TTPK031 Akses Halaman Login Admin.....................................passed
+And TTPK031 Validasi Halaman Admin Login....................................passed
+And TTPK031 Clear Field Email Dan Password..................................passed
+And TTPK031 Input Email Valid...............................................passed
+And TTPK031 Input Password Valid............................................passed
+And TTPK031 Klik Button Login...............................................passed
+And TTPK031 Validasi Halaman Home Admin.....................................passed
+And TTPK031 Klik Side Bar Managemant........................................passed
+And TTPK031 Klik Sub Side Bar Kalender......................................passed
+And TTPK031 Validasi Halaman Kalender.......................................passed
+And TTPK031 Klik Button Tambah Kalender.....................................passed
+And TTPK031 Input Nama Kalender.............................................passed
+And TTPK031 Tekan Tambah Kalender...........................................passed
+And TTPK031 Input Nama Kalender Field Search................................passed
+And TTPK031 Tekan Button Search.............................................passed
+Then TTPK031 Validasi Tambah Kalender.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Tambah Kalender Negaitf" name="TTNK033 Tambah Kalender Dengan Inputan Kosong" time="44.929">
+        <system-out><![CDATA[Given TTNK033 Akses Halaman Login Admin.....................................passed
+And TTNK033 Validasi Halaman Admin Login....................................passed
+And TTNK033 Clear Field Email Dan Password..................................passed
+And TTNK033 Input Email Valid...............................................passed
+And TTNK033 Input Password Valid............................................passed
+And TTNK033 Klik Button Login...............................................passed
+And TTNK033 Validasi Halaman Home Admin.....................................passed
+And TTNK033 Klik Side Bar Managemant........................................passed
+And TTNK033 Klik Sub Side Bar Kalender......................................passed
+And TTNK033 Validasi Halaman Kalender.......................................passed
+And TTNK033 Klik Button Tambah Kalender.....................................passed
+And TTNK033 Input Empty Nama Kalender.......................................passed
+And TTNK033 Tekan Tambah Kalender...........................................passed
+Then TTNK033 Validasi Pesan Error...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Edit Kalender" name="TEPK035 Edit Kalender Kalender" time="76.619">
+        <system-out><![CDATA[Given TEPK035 Akses Halaman Login Admin.....................................passed
+And TEPK035 Validasi Halaman Admin Login....................................passed
+And TEPK035 Clear Field Email Dan Password..................................passed
+And TEPK035 Input Email Valid...............................................passed
+And TEPK035 Input Password Valid............................................passed
+And TEPK035 Klik Button Login...............................................passed
+And TEPK035 Validasi Halaman Home Admin.....................................passed
+And TEPK035 Klik Side Bar Managemant........................................passed
+And TEPK035 Klik Sub Side Bar Kalender......................................passed
+And TEPK035 Validasi Halaman Kalender.......................................passed
+And TEPK035 Clear Input Field Search........................................passed
+And TEPK035 Input Field Search..............................................passed
+And TEPK035 Tekan Button Search.............................................passed
+And TEPK035 Validasi Hasil Search...........................................passed
+And TEPK035 Klik Button Opsi................................................passed
+And TEPK035 Klik Button Edit Kalender.......................................passed
+And TEPK035 Clear Field Edit................................................passed
+And TEPK035 Input Nama Kalender Baru........................................passed
+Then TEPK035 Tekan Simpan Perubahan Kalender................................passed
+When TEPK035 Clear Search Nama Kalender.....................................passed
+And TEPK035 Input Nama Kalender Yang Sudah Di Edit..........................passed
+And TEPK035 Klik Button Search..............................................passed
+Then TEPK035 Validasi Edit Kalender.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Tambah Client Upliner" name="TCUP050 Menambahkan Client Upliner Baru" time="79.244">
+        <system-out><![CDATA[Given TCUP050 Berada Di Halaman Login.......................................passed
+And TCUP050 Validasi Halaman Login Admin....................................passed
+And TCUP050 Membersihkan Input Email Dan Password...........................passed
+And TCUP050 Mengisi Input Email Admin.......................................passed
+And TCUP050 Mengisi Input Password Admin....................................passed
+And TCUP050 Mengklik Tombol Login...........................................passed
+And TCUP050 Berhasil Masuk Ke Halaman Home..................................passed
+And TCUP050 Mengklik Menu Sidebar Management................................passed
+And TCUP050 Mengklik Submenu Client Upliner.................................passed
+And TCUP050 Berhasil Masuk Ke Halaman Client Upliner........................passed
+And TCUP050 Mengklik Tombol Tambah Client Upliner...........................passed
+And TCUP050 Halaman Tambah Client Upliner Ditampilkan.......................passed
+And TCUP050 Mengisi Input Nama..............................................passed
+And TCUP050 Mengisi Input Email.............................................passed
+And TCUP050 Mengisi Input Password..........................................passed
+And TCUP050 Mengisi Input Unit..............................................passed
+And TCUP050 Mengisi Input Client Upliner....................................passed
+And TCUP050 Mengklik Tombol Submit..........................................passed
+And TCUP050 Clear Input Search Upliner......................................passed
+And TCUP050 Input Field Search Upliner......................................passed
+And TCUP050 Klik Button Submit Search.......................................passed
+Then TCUP050 Validasi Hasil Yang Di Tambahkan...............................passed
+]]></system-out>
+    </testcase>
+</testsuite>

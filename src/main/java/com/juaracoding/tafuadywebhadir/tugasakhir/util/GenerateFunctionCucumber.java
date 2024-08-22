@@ -15,14 +15,15 @@ Version 1.0
 public class GenerateFunctionCucumber {
 
     public static void main(String[] args) {
-   //    generateLoginPositif();
+//   generateLoginPositif();
 
         generateVerifikasiPositif();
     }
 
     public static void  generateLoginPositif(){
         String [] strFunction = {
-                "And TRUMP022 Input Nik Fi Field Nik",
+                "And TTPK031 Input Nama Kalender Field Search",
+                "And TTPK031 Tekan Button Search",
 
 
         };
@@ -38,28 +39,6 @@ public class GenerateFunctionCucumber {
 
     public static void  generateVerifikasiPositif(){
         String [] strPrefix = {
-                "@Given",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
-                "@And",
                 "@And",
                 "@And",
                 "@And",
@@ -67,32 +46,10 @@ public class GenerateFunctionCucumber {
         };
 
         String [] strFunction = {
-                "TRUMP025 Mengakses Halaman Login Admin",
-                "TRUMP025 Validasi Halaman Login Admin",
-                "TRUMP025 Clear Field Email Dan Password",
-                "TRUMP025 Input Email Valid",
-                "TRUMP025 Input Password Valid",
-                "TRUMP025 Klik Button login",
-                "TRUMP025 Validasi Halaman Home Admin",
-                "TRUMP025 Klik Side Bar Laporan",
-                "TRUMP025 Klik Sub Side Bar Kehadiran",
-                "TRUMP025 Validasi Halaman Kehadiran",
-                "TRUMP025 Clear Field Nama Di Field Search",
-                "TRUMP025 Clear Field Start Date",
-                "TRUMP025 Clear Field End Date",
-                "TRUMP025 Input Nama Di Field Search nama",
-                "TRUMP025 Input Start Date Di Field Star Date",
-                "TRUMP025 Input End Date DI Field End Date",
-                "TRUMP025 Klik Button Search",
-                "TRUMP025 Validasi Hasil Search",
-                "TRUMP025 Download Image Di Page Admin",
-                "TRUMP025 Compare Kedua Gambar Ke Website Image Online",
-                "TRUMP025 Validasi Hasil Compare",
-                "TRUMP025 Tutup Web Image Online",
-                "TRUMP025 Kembali Ke Web Admin Hadir",
-                "TRUMP025 Klik Button Dropspan Profil",
-                "TRUMP025 Klik Button Logout Admin",
-                "TRUMP025 Validasi Berhasil logout",
+                "TCUP050 Clear Input Search Upliner",
+                "TCUP050 Input Field Search Upliner",
+                "TCUP050 Klik Button Submit Search",
+                "TCUP050 Validasi Hasil Yang Di Tambahkan",
         };
 
         for (int i = 0; i < strFunction.length; i++) {

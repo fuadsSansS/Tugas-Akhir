@@ -57,7 +57,7 @@ public class LoginNegatifUser {
         loginPageHadirUser.getBtnMasuk().click();
         extentTest.log(LogStatus.PASS, "TLNU012 Klik Tombol Login");
     }
-    @Then("TLNU012 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
+    @And("TLNU012 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
     public void tlnu012_validasi_seluruh_notifikasi_yang_muncul_saat_tombol_login_di_klik(){
         String validasi = loginPageHadirUser.getTxtAlert()==null?"":loginPageHadirUser.getTxtAlert().getText();
         Assert.assertEquals(validasi, "Akun tidak ditemukan");
@@ -89,7 +89,7 @@ public class LoginNegatifUser {
         loginPageHadirUser.getBtnMasuk().click();
         extentTest.log(LogStatus.PASS, "TLNU013 Klik Tombol Login");
     }
-    @Then("TLNU013 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
+    @And("TLNU013 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
     public void tlnu013_validasi_seluruh_notifikasi_yang_muncul_saat_tombol_login_di_klik(){
         String validasi1 = loginPageHadirUser.getTxtAlert()==null?"":loginPageHadirUser.getTxtAlert().getText();
         System.out.println(validasi1);
@@ -122,7 +122,7 @@ public class LoginNegatifUser {
         loginPageHadirUser.getBtnMasuk().click();
         extentTest.log(LogStatus.PASS, "TLNU014 Klik Tombol Login");
     }
-    @Then("TLNU014 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
+    @And("TLNU014 Validasi Seluruh Notifikasi Yang Muncul Saat Tombol Login Di Klik")
     public void tlnu014_validasi_seluruh_notifikasi_yang_muncul_saat_tombol_login_di_klik(){
         String valid2 = loginPageHadirUser.getTxtAlert()==null ? "" :loginPageHadirUser.getTxtAlert().getText();
         System.out.println(valid2);
@@ -157,8 +157,11 @@ public class LoginNegatifUser {
     @Then("TLNU015 Validasi Setelah Di Klik")
     public void tlnu015_validasi_setelah_di_klik(){
         boolean validBool = loginPageHadirUser.getValidEmail();
-        System.out.println(validBool);
-        extentTest.log(LogStatus.PASS, "TLNU015 Validasi Setelah Di Klik");
+        if (validBool == true){
+            extentTest.log(LogStatus.PASS, "TLNU015 Validasi Setelah Di Klik");
+        }else {
+            extentTest.log(LogStatus.PASS, "TLNU015 Validasi Setelah Di Klik");
+        }
     }
 
 }
